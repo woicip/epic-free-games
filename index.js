@@ -12,18 +12,20 @@ async function GetFreeGames(){
 
     await page.waitForSelector('.css-1myhtyb');
     const freeGamesContainer = await page.$('.css-1myhtyb');
-    const freeItemsCovers = await page.$('.css-1myhtyb');
     
     try {
         const games = await freeGamesContainer.$$eval('.css-1ukp34s', nodes =>  nodes.map((n) => n.innerText))
-        const covers = await freeItemsCovers.$$eval('img', (nodes) => nodes.map(n => n.src))
+        const covers = await freeGamesContainer.$$eval('img', (nodes) => nodes.map(n => n.src))
+        const urls = await freeGamesContainer.$$eval('a', (nodes) => nodes.map(n => n.href))
+
         const data = games.map((game, index) => {
             const [ status, name, date ] = game.split('\n');
-            return { status, name, date: date.split('Free ')[1], cover: covers[index] }
+            return { status, name, date: date.split('Free ')[1], cover: covers[index], url: urls[index] }
         })
         
         await browser.close();
         return data;
+
     } catch(err){
         await browser.close();
         throw new Error("[!] Something went wrong when getting requested data");
