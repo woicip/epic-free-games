@@ -1,0 +1,22 @@
+{
+  "name": "epic-free-games",
+  "version": "1.0.0",
+  "description": "Small scraping service for getting free games on Epic Games",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woicip/epic-free-games.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woicip/epic-free-games/issues"
+  },
+  "homepage": "https://github.com/woicip/epic-free-games#readme",
+  "dependencies": {
+    "playwright": "^1.31.2"
+  }
+}
