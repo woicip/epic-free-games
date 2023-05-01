@@ -22,8 +22,6 @@ async function GetFreeGames(){
             return { status: gameStatus[index], name, date: status, cover: covers[index], url: urls[index] }
         })
 
-        console.log(data)
-        
         await browser.close();
         return data;
 
