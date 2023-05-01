@@ -38,6 +38,10 @@ async function GetFreeGames(){
     }
 }
 
+<<<<<<< HEAD
 GetFreeGames()
 
 // module.exports = GetFreeGames;
+=======
+module.exports = GetFreeGames;
+>>>>>>> e97b35c8ba59dccfb805b251a2e093224a16b9c9

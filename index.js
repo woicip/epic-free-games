@@ -8,7 +8,7 @@ app.get('/', async (req, res) => {
         res.send({ code: 200, message: "SUCCESS", games });
 
     } catch(err){
-        res.send({ code: 500, message: "Something went wrong when requested rsource", games: null });
+        res.send({ code: 500, message: "Something went wrong when getting requested resource", games: null });
     }
 });
 
