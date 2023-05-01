@@ -8,6 +8,7 @@ app.get('/', async (req, res) => {
         res.send({ code: 200, message: "SUCCESS", games });
 
     } catch(err){
+        console.log(err)
         res.send({ code: 500, message: "Something went wrong when getting requested resource", games: null });
     }
 });

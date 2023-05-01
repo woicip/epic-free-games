@@ -2,8 +2,10 @@ const playwright = require('playwright');
 const url = 'https://store.epicgames.com/en-US/free-games';
 
 async function GetFreeGames(){
-    const browser = await playwright.chromium.launch({ headless: false });
-    const context = await browser.newContext();
+    const browser = await playwright.chromium.launch({ headless: true });
+    const context = await browser.newContext({
+        userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.36'
+    });
 
     const page = await context.newPage();
     await page.goto(url);
@@ -31,6 +33,4 @@ async function GetFreeGames(){
     }
 }
 
-GetFreeGames()
-
-// module.exports = GetFreeGames;
+module.exports = GetFreeGames;
