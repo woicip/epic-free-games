@@ -14,7 +14,7 @@ async function getData(callback){
     await db.push("efg", result)
 }
 
-cron.schedule('*/30 * * * *', () => {
+cron.schedule('*/10 * * * *', () => {
     const dt = new Date()
     const date = dt.getDate()
     const month = dt.getMonth() + 1
