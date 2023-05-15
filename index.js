@@ -11,7 +11,7 @@ const db = new JsonDB(config)
 
 async function getData(callback){
     const result = await GetFreeGames()
-    await db.push("efg", result)
+    await db.push("efg", { lastUpdate: new Date(), games: result })
     console.log("Game list Updated ✔")
 }
 
@@ -29,8 +29,8 @@ cron.schedule('*/10 * * * *', () => {
 
 app.get('/', async (req, res) => {
     try {
-        const games = await db.getData('efg')
-        res.send({ code: 200, message: "SUCCESS", games, meta: { total: games.length } });
+        const data = await db.getData('efg')
+        res.send({ code: 200, message: "SUCCESS", games: data.games, meta: { total: games.length, lastUpdate: data.lastUpdate } });
 
     } catch(err){
         res.status(500).send({ code: 500, message: "Something went wrong when getting requested resource", games: null });

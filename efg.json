@@ -1,1 +1,14 @@
-[{"status":"FREE NOW","name":"The Sims™ 4 The Daring Lifestyle Bundle","date":"Free Now - May 18 at 10:00 PM","cover":"https://cdn1.epicgames.com/offer/2a14cf8a83b149919a2399504e5686a6/EGS_TheSims4TheDaringLifestyleBundle_Maxis_Bundles_S1_2560x1440-1e11cf4a08a3fbc87660e4867c74d016?h=480&quality=medium&resize=1&w=854","url":"https://store.epicgames.com/en-US/p/the-sims-4--the-daring-lifestyle-bundle"},{"name":"Unlocking in 03:01:20:52","cover":"https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/EN-mega-sale-vault-16x9-asset_1920x1080-a27cf3919dde320a72936374a1d47813?h=480&quality=medium&resize=1&w=854","url":"https://store.epicgames.com/en-US/free-games"}]
+[
+    { 
+        "status":"FREE NOW",
+        "name":"The Sims™ 4 The Daring Lifestyle Bundle",
+        "date":"Free Now - May 18 at 10:00 PM",
+        "cover":"https://cdn1.epicgames.com/offer/2a14cf8a83b149919a2399504e5686a6/EGS_TheSims4TheDaringLifestyleBundle_Maxis_Bundles_S1_2560x1440-1e11cf4a08a3fbc87660e4867c74d016?h=480&quality=medium&resize=1&w=854",
+        "url":"https://store.epicgames.com/en-US/p/the-sims-4--the-daring-lifestyle-bundle"
+    },
+    {
+        "name":"Unlocking in 03:01:20:52",
+        "cover":"https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/EN-mega-sale-vault-16x9-asset_1920x1080-a27cf3919dde320a72936374a1d47813?h=480&quality=medium&resize=1&w=854",
+        "url":"https://store.epicgames.com/en-US/free-games"
+    }
+]
