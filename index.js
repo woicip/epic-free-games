@@ -15,6 +15,11 @@ async function getData(){
 }
 
 cron.schedule('*/30 * * * *', () => {
+    const dt = new Date()
+    const hour = dt.getHours()
+    const minutes = dt.getMinutes()
+    const seconds = dt.getSeconds()
+    console.log(`[${hour.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}] Updating game list ...`)
     getData()
 })
 
