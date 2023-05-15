@@ -12,6 +12,7 @@ const db = new JsonDB(config)
 async function getData(callback){
     const result = await GetFreeGames()
     await db.push("efg", result)
+    console.log("Game list Updated ✔")
 }
 
 cron.schedule('*/10 * * * *', () => {
