@@ -9,17 +9,20 @@ const GetFreeGames = require('./GetFreeGames');
 const config = new Config("efg", true, false, "/")
 const db = new JsonDB(config)
 
-async function getData(){
+async function getData(callback){
     const result = await GetFreeGames()
     await db.push("efg", result)
 }
 
 cron.schedule('*/30 * * * *', () => {
     const dt = new Date()
+    const date = dt.getDate()
+    const month = dt.getMonth() + 1
+    const year = dt.getFullYear()
     const hour = dt.getHours()
     const minutes = dt.getMinutes()
     const seconds = dt.getSeconds()
-    console.log(`[${hour.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}] Updating game list ...`)
+    console.log(`[${date.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}/${year} - ${hour.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}] Updating game list ...`)
     getData()
 })
 
