@@ -29,7 +29,7 @@ cron.schedule('*/30 * * * *', () => {
 app.get('/', async (req, res) => {
     try {
         const games = await db.getData('efg')
-        res.send({ code: 200, message: "SUCCESS", games });
+        res.send({ code: 200, message: "SUCCESS", games, meta: { total: games.length } });
 
     } catch(err){
         res.status(500).send({ code: 500, message: "Something went wrong when getting requested resource", games: null });
