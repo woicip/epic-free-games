@@ -1,5 +1,6 @@
-# epic-free-games
-Small scraping service for getting free games on Epic Games
+# Epic Free Games
+<!-- Small scraping service for getting free games on Epic Games -->
+REST API for providing list of current FREE games in Epic Games Store
 
 ### Response
 ```json
