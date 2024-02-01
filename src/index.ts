@@ -40,5 +40,5 @@ app.get('/', async (req: Request, res: Response) => {
 
 app.listen(config.PORT, () => {
     getGames()
-    console.log('Epic Free Games service is running at http://localhost:3303')
+    console.log(`Epic Free Games service is running at http://localhost:${config.PORT}`)
 });

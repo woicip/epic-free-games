@@ -1,5 +1,5 @@
 FROM node:18
-ENV APP_PORT="3303"
+ENV PORT="3303"
 
 LABEL author="woicip"
 LABEL github="https://github.com/woicip/epic-free-games"
@@ -16,6 +16,6 @@ RUN apt-get update \
 
 COPY . .
 
-EXPOSE ${APP_PORT}
+EXPOSE ${PORT}
 
 CMD ["yarn", "start"]
